@@ -1,12 +1,13 @@
 $(document).ready (function(){
 
-  $("#collapse-menu").click(function(event){
+  $(".icon").click(function(event){
     event.preventDefault();
   })
 
  //trigger the 3 bars to toggle classes
   $(".icon").click(function(){
     $("#nav").fadeToggle(400);
+    $('ul li').velocity("transition.slideRightIn", { display: 'block', stagger: 250 })
     $("#top-line").toggleClass("top-transform");
     $("#middle-line").toggleClass("mid-transform");
     $("#bottom-line").toggleClass("bottom-transform");

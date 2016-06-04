@@ -1,0 +1,194 @@
+
+/*
+Project Name: Tulika Ahuja's Portfolio
+Client: Tulika
+Author: Prerna Gupta
+*/
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,.9);
+}
+
+
+
+header{
+width: 100%;
+height: 10%;
+position:fixed;
+display: block;
+background-color: rgba(0,0,0,.9);
+margin: 0;
+padding: .5%;
+z-index: 1;
+}
+
+h1 {
+   font-family: 'Oswald',Arial, sans-serif;
+   color:white;
+   display:inline;
+   padding-left: 2%;
+   font-size: 2em;
+   text-shadow: 5px black;
+}
+
+/*Burger menu styling */
+#nav{
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity:1;
+  padding:6% 8%;
+  text-align:center;
+  margin:0;
+}
+
+#nav li{
+  list-style-type: none;
+  text-decoration:none;
+}
+
+#nav li a{
+  text-decoration:none;
+  font-size:2em;
+  color:white;
+  line-height:4;
+}
+
+#nav li a:hover, a:active {
+     background-color: white;
+     color:black;
+     padding: 3px;
+     font-weight: 700;
+}
+
+.icon{
+  display: inline-block;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  margin: 15px;
+  z-index:1000;
+  left:95%;
+}
+
+
+#top-line {
+  top: 5px;
+}
+
+#middle-line{
+  top: 15px;
+}
+
+#bottom-line{
+  top: 25px;
+ }
+
+.bars {
+  background: white;
+  width: 30px;
+  height: 5px;
+  transition: 0.6s ease;
+  transition-timing-function: ease-out;
+  position: absolute;
+  border-radius: 10px;
+
+}
+
+/* classes to add in jquery for burger menu */
+.top-transform{
+  background:white;
+  top: 15px ;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg) translateY(14px);
+
+}
+.mid-transform{
+  opacity: 0;
+}
+.bottom-transform{
+  background:white;
+  top: 15px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg) translateY(-14px);
+}
+
+
+/*porfolio pages*/
+#container {
+  width: 100%;
+  height: 100%;
+  position:absolute;
+
+}
+
+.images{
+  background-color: white;
+  position: relative;
+  height:auto;
+  width:100%;
+  border: 4px solid white;
+  padding-top: 7%;
+  padding-bottom: 10%;
+}
+
+.images ul{
+  padding:0;
+}
+.images li{
+  list-style-type: none;
+}
+.images img {
+  +size(100% auto)
+  display:block;
+  height:auto;
+  max-width:40%;
+  margin:0 30% 8%;
+}
+
+.description{
+  color: white;
+  text-align: center;
+  background-color: rgba(0,0,0,.9);
+  width:100%;
+  height:25%;
+  position:fixed;
+  bottom:0;
+}
+.description h2{
+  display: inline-block;
+  font-size: 2em;
+  margin-right: 30%;
+  margin-left: 30%;
+}
+.description a{
+  text-decoration:white;
+  color:white;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
