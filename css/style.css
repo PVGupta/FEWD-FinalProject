@@ -32,24 +32,28 @@ body {
 
 header{
 width: 100%;
-height: 10%;
-position:relative;
-display: inline-block;
-background-color: rgba(0,0,0,.9);
+height: 70px;
+position:fixed;
+display: block;
+background-color: rgba(0,0,0,.8);
 margin: 0;
 padding: .5%;
 z-index: 1;
 }
 
-/*h1 {
+h1 {
    font-family: 'Oswald',Arial, sans-serif;
    color:white;
-   display:block;
+   display:inline;
    padding-left: 2%;
    font-size: 2em;
    text-shadow: 5px black;
-}*/
+}
 
+#logo{
+  display: inline-block;
+  width:200px;*/
+}
 /*Burger menu styling */
 #nav{
   top: 0;
@@ -78,21 +82,26 @@ z-index: 1;
   line-height:4;
 }
 
-#nav li a:hover, a:active {
+#nav li a:hover, #nav li a:active {
      background-color: white;
      color:black;
      padding: 3px;
      font-weight: 700;
 }
 
+#collapse-menu {
+ position: absolute;
+ display: inline-block;
+ right:20px;
+}
+
 .icon{
-  display: inline-block;
-  position: fixed;
+  display: block;
+  position: relative;
   height: 40px;
   width: 40px;
   margin: 15px;
   z-index:1000;
-  left:95%;
 }
 
 
@@ -143,26 +152,116 @@ z-index: 1;
 #main-container {
   width: 100%;
   height: 100%;
-  position:absolute;
-  background:  url(../images/homepage.jpg) no-repeat top center #131e27;
-  background-size: cover;
 }
 
 #middleContainer{
+  margin-top: 70px;
   height:100%;
   width:100%;
+  position:fixed;
+  background:  url(../images/homepage.jpg) no-repeat top center #131e27;
+  background-size: cover;
   }
 
 .main-name{
-width:100%;
-height: 100%;
+width:50%;
+/*height: 100%;*/
 text-align: center;
-padding: 10%;
 font-weight: 800;
 color: white;
 font-size: 5em;
+
 }
 
+.main-name p {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  margin:0;
+
+}
+
+/*porfolio pages*/
+#container {
+  width: 100%;
+  height: 100%;
+  position:absolute;
+
+}
+
+.img-container{
+  position: absolute;
+  width:100%;
+  height:auto;
+  background-color: white;
+  position:absolute;
+  height:auto;
+  width:100%;
+  padding-top: 2%;
+  padding-bottom: 10%;
+  margin-top: 70px;
+}
+
+.images {
+  min-height: 200px;
+  text-align: center;
+  padding-bottom: 20px;
+  color: white;
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+
+.images ul{
+  padding:0;
+}
+.images li{
+  list-style-type: none;
+}
+.images img {
+  +size(100% auto)
+  display:block;
+  height:auto;
+  max-width:40%;
+  margin:0 30% 5%;
+}
+
+.images.visible {
+  opacity: 1;
+}
+
+.description{
+  color: white;
+  text-align: center;
+  background-color: rgba(0,0,0,.8);
+  width:100%;
+  height:25%;
+  position:fixed;
+  bottom:0;
+
+}
+.description h2{
+  display: inline-block;
+  font-size: 2em;
+  margin-bottom:1%;
+}
+.description a{
+  position: relative;
+  left:35%;
+  text-decoration:none;
+  color:white;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  outline:none !important;
+  border-style: none;
+}
+
+.description p {
+  margin:0;
+  padding: 0% 10%;
+}
 /******************************************
 /* LAYOUT
 /*****
