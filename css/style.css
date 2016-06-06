@@ -26,6 +26,7 @@ body {
   height: 100%;
   margin: 0 auto;
   background-color: rgba(0,0,0,.9);
+  clear: both;
 }
 
 
@@ -35,7 +36,8 @@ width: 100%;
 height: 70px;
 position:fixed;
 display: block;
-background-color: rgba(0,0,0,.8);
+/*background-color: rgba(0,0,0,.9);*/
+background-color: black;
 margin: 0;
 padding: .5%;
 z-index: 1;
@@ -49,18 +51,15 @@ h1 {
    font-size: 2em;
    text-shadow: 5px black;
 }
+header a {
+  text-decoration:none;
+  outline:none !important;
+  border-style: none;
+}
 
 #logo{
   display: inline-block;
   width:200px;*/
-}
-
-#logo a {
-  text-decoration:none;
-  color:white;
-  outline:none !important;
-  border-style: none;
-
 }
 /*Burger menu styling */
 #nav{
@@ -88,6 +87,7 @@ h1 {
   font-size:2em;
   color:white;
   line-height:4;
+
 }
 
 #nav li a:hover, #nav li a:active {
@@ -103,6 +103,19 @@ h1 {
  right:20px;
 }
 
+@media only screen and (max-width: 768px){
+  #nav li a{
+    font-size:3em;
+    line-height:4;
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  #nav li a{
+    font-size:2.5em;
+    line-height:4;
+  }
+}
 .icon{
   display: block;
   position: relative;
@@ -238,20 +251,36 @@ font-size: 5em;
   opacity: 1;
 }
 
+@media only screen and (max-width: 768px){
+  .images {
+    opacity: 1;
+  }
+  .images img {
+    margin:0 10% 3%;
+    max-width:70%;
+  }
+}
 .description{
   color: white;
   text-align: center;
-  background-color: rgba(0,0,0,.9);
+  /*background-color: rgba(0,0,0,.9);*/
+  background-color: black;
   width:100%;
-  height:25%;
+  height:170px;
   position:fixed;
   bottom:0;
-
+  padding-bottom: : 2px;
+}
+@media only screen and (max-width: 768px){
+  .description{
+    height:200px;
+  }
 }
 .description h2{
   display: inline-block;
   font-size: 2em;
-  margin-bottom:1%;
+  padding: 10px;
+  margin: 0;
 }
 .description a{
   position: relative;
@@ -267,7 +296,8 @@ font-size: 5em;
 
 .description p {
   margin:0;
-  padding: 0% 10%;
+  padding: 0% 8%;
+  width
 }
 
 /* padchinh page */
@@ -276,12 +306,12 @@ font-size: 5em;
   width:100%;
   background:white;
   height:auto;
-  bottom:25%;
+  bottom:170px;
   top:70px;
 }
 
 .vid-container video{
-  width:40%;
+  width:50%;
   height:auto;
   margin:0 auto;
   background-color:white;
@@ -306,50 +336,71 @@ video#bgvid {
 
 
 .aboutimg {
-  width:35%;
+  min-width:50%;
   float: left;
-  margin:3.5% 0% 3.5% 7%;
-
+  position: fixed;
 }
 
 .aboutimg img{
-  width:100%;
+  width:30%;
+  position: fixed;
   +size(100% auto);
+  margin:3% 0% 3.5% 17%;
 }
 
 .aboutdescr{
   float: right;
-  width :35%;
+  width :30%;
   height:300px;
-  margin:7% 14% 8% 2% ;
+  margin:5% 17% 8% 2% ;
   line-height: 1.5;
 }
 
 .social {
-  clear: both;
+  padding: 1.2%;
   display: block;
-  padding: 1.6%;
-  line-height:1.5;
 }
 .social h3{
   margin: 0;
 }
 
+.social ul{
+  margin:0;
+  padding: 0;
+}
+
 .social ul li{
-  position: relative;
-  list-style-type: none;
-  display: inline-block;
-  padding-right: 6%;
-
+  list-style: none;
+  padding-top:7px;
 }
 
-.social ul {
-  position: relative;
-  margin-right: 40px;
-  margin-left: 45px;
-}
+.iconsocial {
+  display: inline;
+  margin: 0 auto;
+  position:relative;
+  right:25%;
+  }
 
-
+  @media only screen and (max-width: 1024px){
+  .aboutimg{
+    float: none;
+    display:block;
+    position: fixed;
+    /*width:30%;*/
+  }
+  .aboutimg img {
+    width:30%;
+    margin-left: 35%;
+  }
+  .aboutdescr{
+    width: 100%;
+    padding: 20% 10% 5% 10%;
+    float: none;
+    display: fixed;
+    position: relative;
+    top:100px;
+  }
+  }
 /******************************************
 /* LAYOUT
 /*****

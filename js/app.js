@@ -10,7 +10,7 @@ $(document).ready (function(){
     $("#top-line").toggleClass("top-transform");
     $("#middle-line").toggleClass("mid-transform");
     $("#bottom-line").toggleClass("bottom-transform");
-    $('#nav li').velocity("transition.slideRightIn", { display: 'block', stagger: 250 })
+    $('#nav li').velocity("transition.slideRightIn", { display: 'block',stagger: 200 })
   });
 
 //   //to minimise overlay with esc
@@ -24,15 +24,11 @@ $(document).ready (function(){
 });
 
 //for the image animation
-
-// browser's height
 var winHeight = $(window).height();
-// animated sections
+
 var animate = $('.appear');
 
 $(window).scroll(function () {
-  // check how much has been scrolled
-  // console.log($(window).scrollTop());
   runAnimation();
 })
 
@@ -45,7 +41,6 @@ function runAnimation () {
     }
 
     var topAnim = singleAnim.offset().top;
-    // console.log(topAnim)
     if (scrolled > (topAnim - (winHeight * .6))) {
       singleAnim.addClass('visible');
     }
