@@ -11,6 +11,7 @@ $(document).ready (function(){
     $("#middle-line").toggleClass("mid-transform");
     $("#bottom-line").toggleClass("bottom-transform");
     $('#nav li').velocity("transition.slideRightIn", { display: 'block',stagger: 200 })
+    $('#nav p').velocity("transition.slideRightIn", { display: 'block',stagger: 200 })
   });
 
 //   //to minimise overlay with esc
