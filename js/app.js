@@ -26,7 +26,6 @@ $(document).ready (function(){
 
 //for the image animation
 var winHeight = $(window).height();
-
 var animate = $('.appear');
 
 $(window).scroll(function () {

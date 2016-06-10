@@ -172,42 +172,40 @@ z-index: 1;
 }
 
 #middleContainer{
-  margin-top: 70px;
   height:100%;
   width:100%;
   position:fixed;
   }
 
 .main-name{
-/*width:50%;*/
+width: 100%;
 text-align: center;
-margin:20% 20% 20% 40%;
-/*margin:256px 256px 256px 512px;*/
 position: absolute;
+top: 55%;
+left: 50%;
+transform: translate(-50%, -50%);
+
 }
 
 .main-name p {
   font-family: 'Oswald', sans-serif;
   font-weight: 500;
   color: black;
-  font-size: 32px;
+  font-size: 2em;
   letter-spacing: 0.25em;
-  position: fixed;
   z-index: 1000;
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1024px){
-  .main-name {
-    margin-top: 24%;
+@media only screen and (max-width: 1200px){
+  .main-name p{
+    font-size: 2em;
+    width:100%;
+    top:50%;
+    position: absolute;
+    top: 45%;
+    left: 55%;
+    transform: translate(-45%, -55%);
   }
-}
-
-@media only screen and (max-width: 768px){
-  .main-name {
-    bottom:50%;
-    right:30%;
-  }
-
 }
 
 /* other pages*/
@@ -220,13 +218,14 @@ position: absolute;
 
 header{
 width: 100%;
-height: 70px;
+height: 10%;
 position:fixed;
 display: block;
 background-color:white;
 margin: 0;
 padding: 1.2%;
 z-index: 1;
+clear: both;
 }
 
  header h1 {
@@ -251,16 +250,25 @@ z-index: 1;
 .img-container{
   position: absolute;
   width:100%;
-  height:auto;
-  background-color: white;
-  padding-bottom: 15%;
+  height:67%;
+  /*padding-bottom: 15%;*/
   margin-top: 70px;
+  /*background: rgba(255, 255, 255, 0.7);*/
+  /*overflow: scroll;*/
+}
+.background-image{
+  width:100%;
+  height: 100%;
+  background:  url(../images/background.jpg) no-repeat top center #131e27;
+  background-size: cover;
+  position: fixed;
+
 }
 
 .images {
   min-height: 200px;
   margin-left: 30%;
-  padding-top: 30px;
+  padding-top: 14px;
   padding-bottom: 30px;
   color: white;
   opacity: 0;
@@ -279,7 +287,7 @@ z-index: 1;
   +size(100% auto)
   display:block;
   height:auto;
-  max-width:55%;
+  max-width:60%;
 }
 
 .images.visible {
@@ -291,10 +299,11 @@ z-index: 1;
   font-family: 'Oswald', sans-serif;
   background-color: rgba(0,0,0,.8);
   width:100%;
-  height:160px;
+  height:23%;
   position:fixed;
   bottom:0;
   padding-bottom:1px;
+  /*z-index:2;*/
 }
 
 .description h2{
@@ -329,7 +338,7 @@ z-index: 1;
   color: white;
   position: absolute;
   top:50%;
-  left:8%;
+  left:7%;
 }
 
 .description a #next{
@@ -363,11 +372,11 @@ z-index: 1;
     padding-bottom:1px;
   }
   .description h2{
-    font-size: 1em;
+    font-size: .75em;
   }
   .description p {
     top:25%;
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
   .img-container{
     padding-bottom:200px;
@@ -389,122 +398,126 @@ z-index: 1;
 /*About page*/
 
 .about-container {
-  position: fixed;
+  position:absolute;
   width:100%;
-  height:auto;
   background-color: white;
-  top: 70px;
-  bottom:0px;
+  top: 10%;
+  bottom: 0;
+}
+
+.about-content {
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+  display: table;
+}
+
+.aboutimg, .aboutdescr {
+  padding: 0 3%;
+  display: table-cell;
+}
+
+.aboutimg {
+  width: 50%;
 }
 
 .aboutimg img{
-  +size(100% auto);
-  width:350px;
-  position:absolute;
-  left:250px;
-  top:35px;
+  max-width: 100%;
 }
 
+.aboutdescr p {
+  margin-top: 0;
+}
 .aboutdescr{
-  position: fixed;
-  right:220px;
-  top:130px;
-  width :33%;
-  height:300px;
+  width: 50%;
+  vertical-align:middle;
+  height: auto;
   line-height: 1.5;
+  font-size: 1em;
   font-family: 'Playfair Display', serif;
 }
 
-.iconsocial , .social p{
-  color: white;
-  display: inline;
+.socialmedia{
+  float: left;
+  padding: 2.7%;
+}
+
+#email {
+  float: right;
+  position: relative;
   margin: 0;
-  position: absolute;
-  top:35%;
+}
+
+.socialmedia a {
+  color: white;
+}
+
+.social {
+  height:19%;
+  width: 100%;
+  /*padding-top: 2%;*/
+  /*display: inline-block;
+  text-align: center;*/
+}
+.socialmedia a {
+  color: white;
+}
+
+.socialicon , .social p{
+  color: white;
+  /*position: relative;*/
+  /*display: inline;*/
   font-family: 'Oswald', sans-serif;
   font-size: 1.25em;
   font-weight: 300;
   letter-spacing: .2em;
 }
 
-.iconsocial:first-child{
-  left:4.5%;
+ @media only screen and (max-width: 1080px){
+
+ .aboutdescr{
+  font-size: .9em;
+ }
+ .about-container{
+   padding-top: 5%;
+ }
 }
 
-.iconsocial:nth-child(2){
-  left:10%;
+@media only screen and (max-width:986px){
+
+.aboutdescr{
+ font-size: .85em;
+}
 }
 
-.social p{
-  margin-left: 42%;
+ @media only screen and (max-width: 768px){
+
+.about-container{
+  text-align: center;
 }
-
-/*@media only screen and (max-width: 768px){
-
-   .about-container{
-     position: absolute;
-   }
-    .aboutimg{
-      width:100%;
-    }
-  .aboutimg img{
-    +size(100% auto);
-    width:150px;
-    left:130px;
-    position:relative;
-    height: auto;
-    display: block;
-
-  }
-
-  .aboutdescr{
-    display:block;
-    position:relative;
-    text-align: center;
-    width:70%;
-    left:15%;
-    top:50px;
-    font-size: .75em;
-  }
-  .social {
-    height:150px;
-    font-size: .75em;
-  }
-
-  .iconsocial:nth-child(2){
-    left:15%;
-  }
-  .social p{
-    margin-left: 35%;
-  }
-}
-
- /*@media only screen(max-width: 1024px){
-   .about-container {
-     position: fixed;
+.aboutimg, .aboutdescr {
+     display: block;
      width:100%;
-     height:auto;
-     background-color: white;
-     top: 70px;
-     bottom:190px;
-   }
+}
+.aboutimg{
+  width:47%;
+  margin: auto;
+}
 
+.aboutdescr{
+    font-size: .9em;
+}
 
-   .aboutimg img{
-     +size(100% auto);
-     width:80%;
-     position:absolute;
-     left:2%;
-     top:18%;
-   }
+.social p , .socialmedia{
+  font-size: .9em;
+}
 
-   .aboutdescr{
-     position: fixed;
-     right:10%;
-     top:24.5%;
-     width :45%;
-   }
- }*/*/
+.socialmedia{
+  float: left;
+  padding-top: 5%;
+}
+ }
+
 
 /* padchinh page */
 .vid-container{
@@ -533,7 +546,7 @@ video#bgvid {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url(polina.jpg) no-repeat;
+    /*background: url(polina.jpg) no-repeat;*/
     background-size: cover;
 }
 
@@ -553,42 +566,4 @@ height:auto;
   height:auto;
   padding: 2% 15% 10%;
   margin-top: 70px;
-}
-
-.writing-description{
-color: white;
-background-color: black;
-width:100%;
-height:120px;
-position:fixed;
-bottom:0;
-}
-.writing-description a i{
-position: relative;
-text-decoration:none;
-color:white;
-display: inline-block;
-padding: 0;
-margin: 0;
-outline:none !important;
-border-style: none;
-}
-
-#writing-left{
-position: absolute;
-left:5%;
-top:6%;
-}
-
-#writing-right{
-position: absolute;
-right:5%;
-top:6%;
-}
-
-.writing-description a #next{
-display: block;
-position: absolute;
-top:50%;
-right:5%;
 }
