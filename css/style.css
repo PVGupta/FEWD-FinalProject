@@ -88,6 +88,13 @@ z-index: 1;
   color: white;
 }
 
+#nav p a {
+  color: white;
+  /*font-weight: 500;*/
+  text-decoration: underline;
+
+}
+
 #nav li a:hover, #nav li a:active {
      background-color: #FFC400;
      color:black;
@@ -566,4 +573,9 @@ height:auto;
   height:auto;
   padding: 2% 15% 10%;
   margin-top: 70px;
+}
+/*work section*/
+
+#inProgress{
+  background-color: white;
 }
